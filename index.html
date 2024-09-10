@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar with Flexbox Only</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar Container */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 15px 20px;
+            flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+        }
+
+        /* Logo Styling */
+        .logo {
+            font-size: 24px;
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Navigation Links */
+        .nav-links {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap; /* Ensures links wrap if they can't fit on the same line */
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* Flexbox Behavior for Navbar Responsiveness */
+        .nav-links {
+            flex-grow: 1;
+            justify-content: flex-end; /* Align links to the right */
+        }
+
+        /* Flex shrink and grow for the logo */
+        .logo {
+            flex-grow: 1;
+            flex-shrink: 1; /* Shrinks logo if screen is small */
+        }
+
+        /* Responsive flex behavior */
+        nav {
+            flex-wrap: wrap; /* Allows the navbar items to wrap */
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo">MyLogo</a>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>
